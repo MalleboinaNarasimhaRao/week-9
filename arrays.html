@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Array Operations</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Array Operations</h2>
+
+    <p id="out"></p>
+
+    <script>
+        // Create an array of fruits
+        let fruits = ["Apple", "Banana", "Mango"];
+
+        // Add an element at the end
+        fruits.push("Orange");
+
+        let msg = "Array: " + fruits.join(", ") + "<br>";
+        msg += "Length: " + fruits.length + "<br>";
+        msg += "First element: " + fruits[0] + "<br><br>";
+
+        // Create a numbers array
+        let numbers = [10, 25, 7, 40, 15];
+
+        let sum = 0;
+        let max = numbers[0];
+
+        // Calculate sum and maximum
+        for (let n of numbers) {
+            sum += n;
+
+            if (n > max) {
+                max = n;
+            }
+        }
+
+        msg += "Numbers: " + numbers.join(", ") + "<br>";
+        msg += "Sum = " + sum + "<br>";
+        msg += "Maximum = " + max;
+
+        // Display output
+        document.getElementById("out").innerHTML = msg;
+    </script>
+
+</body>
+
+</html>
